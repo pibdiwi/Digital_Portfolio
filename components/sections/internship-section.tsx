@@ -33,7 +33,7 @@ const internshipProjects = [
 // OJT Experience images - Replace with your actual images
 const ojtImages = [
   "/1.jpg?height=600&width=800",
-  "/2.jpgheight=600&width=800",
+  "/2.jpg?height=600&width=800",
   "/3.jpg?height=600&width=800",
   "/4.jpg?height=600&width=800",
   "/5.jpg?height=600&width=800",
