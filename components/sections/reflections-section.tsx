@@ -2,7 +2,8 @@
 
 import { useInView } from "@/hooks/use-in-view"
 import { cn } from "@/lib/utils"
-import { GraduationCap, Target, Heart, ArrowRight } from "lucide-react"
+import { GraduationCap, Target, Heart, ArrowRight, Download, ExternalLink, FileText } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const reflections = [
   {
@@ -42,8 +43,17 @@ const nextSteps = [
   "Continue developing both technical and soft skills",
 ]
 
+const REFLECTION_PDF_PATH = "/Villamin_Joseph_Reflection.pdf"
+
 export function ReflectionsSection() {
   const { ref, isInView } = useInView({ threshold: 0.1 })
+
+  const handleDownload = () => {
+    const a = document.createElement("a")
+    a.href = REFLECTION_PDF_PATH
+    a.download = "Reflection_Joseph_Villamin.pdf"
+    a.click()
+  }
 
   return (
     <section
@@ -70,6 +80,35 @@ export function ReflectionsSection() {
           </p>
         </div>
 
+        {/* Reflection Paper Actions */}
+        <div
+          className={cn(
+            "mb-16 flex flex-wrap gap-3 transition-all duration-1000 delay-100",
+            isInView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          )}
+        >
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleDownload}
+            className="gap-2"
+          >
+            <Download className="h-4 w-4" />
+            Download Reflection Paper
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            asChild
+            className="gap-2"
+          >
+            <a href={REFLECTION_PDF_PATH} target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="h-4 w-4" />
+              View Reflection Paper
+            </a>
+          </Button>
+        </div>
+
         {/* Reflection Cards */}
         <div className="mb-20 grid gap-8 lg:grid-cols-3">
           {reflections.map((reflection, index) => (
@@ -94,6 +133,44 @@ export function ReflectionsSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Reflection Paper Preview Card */}
+        <div
+          className={cn(
+            "mb-20 rounded-2xl border border-primary/20 bg-primary/5 p-8 backdrop-blur-sm transition-all duration-1000 delay-500",
+            isInView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          )}
+        >
+          <div className="flex flex-col items-center gap-6 sm:flex-row">
+            <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl bg-primary/20">
+              <FileText className="h-8 w-8 text-primary" />
+            </div>
+            <div className="flex-1 text-center sm:text-left">
+              <h3 className="mb-1 text-lg font-semibold text-foreground">Reflection Paper</h3>
+              <p className="mb-4 text-sm text-muted-foreground">
+                Read my comprehensive reflection paper on my college journey, personal growth, and future aspirations
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href={REFLECTION_PDF_PATH}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition-all hover:bg-primary/20 hover:border-primary"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Open in New Tab
+                </a>
+                <button
+                  onClick={handleDownload}
+                  className="inline-flex items-center gap-2 rounded-lg border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-all hover:bg-accent/20 hover:border-accent"
+                >
+                  <Download className="h-4 w-4" />
+                  Download
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Next Steps */}
