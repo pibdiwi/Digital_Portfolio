@@ -104,7 +104,7 @@ export function AcademicSection() {
                 )}
                 style={{ transitionDelay: `${300 + index * 100}ms` }}
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden bg-white">
                   <Image
                     src={work.image}
                     alt={work.title}
