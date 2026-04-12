@@ -35,7 +35,7 @@ const skills = [
 ]
 
 
-const RESUME_PDF_PATH = "/Villamin_Joseph_Resume.pdf"
+const RESUME_PDF_PATH = "/Villamin, Joseph_Resume.pdf"
 
 export function ResumeSection() {
   const { ref, isInView } = useInView({ threshold: 0.1 })
