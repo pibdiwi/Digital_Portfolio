@@ -32,11 +32,11 @@ const internshipProjects = [
 
 // OJT Experience images - Replace with your actual images
 const ojtImages = [
-  "/1.jpg?height=600&width=800",
-  "/2.jpg?height=600&width=800",
-  "/3.jpg?height=600&width=800",
-  "/4.jpg?height=600&width=800",
-  "/5.jpg?height=600&width=800",
+  "/reformat.jpg?height=600&width=800",
+  "/cctv.jpg?height=600&width=800",
+  "/crimp.jpg?height=600&width=800",
+  "/storage.jpg?height=600&width=800",
+  "/mentor.jpg?height=600&width=800",
 ]
 
 export function InternshipSection() {
