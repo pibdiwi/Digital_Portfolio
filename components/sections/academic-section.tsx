@@ -19,7 +19,7 @@ const individualWorks = [
     tags: ["Case Study", "Business", "Strategy"],
   },
   {
-    title: "Website Design Projects",
+    title: "Website Design Project",
     description:
       "Designed and developed a functional website prototype showcasing user-centered design principles and modern web technologies.",
     tags: ["Design", "Web Development", "UI/UX"],
@@ -60,7 +60,7 @@ export function AcademicSection() {
             My Best Work
           </h2>
           <p className="max-w-2xl text-lg text-muted-foreground">
-            A collection of my best academic projects, showcasing both individual
+            A collection of my best academic projects, showcasing both individual 
             excellence and collaborative achievements throughout my academic journey.
           </p>
         </div>
@@ -79,9 +79,8 @@ export function AcademicSection() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {individualWorks.map((work, index) => (
-              <a
+              <div
                 key={work.title}
-                href={work.link}
                 className={cn(
                   "group block rounded-2xl border border-border bg-card/30 p-6 transition-all duration-1000 hover:border-primary/50 hover:bg-card/50 flex flex-col justify-between",
                   isInView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
@@ -109,7 +108,7 @@ export function AcademicSection() {
                   </div>
                   <ExternalLink className="h-4 w-4 text-primary opacity-0 transition-opacity group-hover:opacity-100" />
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </div>
@@ -157,10 +156,6 @@ export function AcademicSection() {
                   <p className="mb-4 text-sm text-muted-foreground">
                     {work.description}
                   </p>
-                  <div className="mb-4 flex items-center gap-2 text-xs text-muted-foreground">
-                    <Users className="h-3 w-3" />
-                    <span>Team: {work.team.join(", ")}</span>
-                  </div>
                   <div className="flex flex-wrap gap-2">
                     {work.tags.map((tag) => (
                       <span
