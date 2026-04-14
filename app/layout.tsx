@@ -13,7 +13,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Digital Portfolio | Your Name',
+  title: 'Digital Portfolio | Joseph Villamin',
   description: 'A digital portfolio showcasing academic excellence, professional experience, and personal growth',
   generator: 'v0.app',
   icons: {
