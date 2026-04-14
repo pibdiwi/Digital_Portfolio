@@ -43,7 +43,7 @@ const nextSteps = [
   "Continue developing both technical and soft skills",
 ]
 
-const REFLECTION_PDF_PATH = "/Villamin, Joseph_Reflection_Paper.pdf"
+const REFLECTION_PDF_PATH = "Villamin, Joseph_Reflection_Paper.pdf"
 
 export function ReflectionsSection() {
   const { ref, isInView } = useInView({ threshold: 0.1 })
