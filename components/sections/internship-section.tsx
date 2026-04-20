@@ -68,39 +68,6 @@ export function InternshipSection() {
           </p>
         </div>
 
-        {/* Internship Details Card */}
-        <div
-          className={cn(
-            "mb-16 rounded-2xl border border-primary/30 bg-primary/10 p-6 backdrop-blur-sm transition-all duration-1000 delay-200 hover:border-primary/50 hover:bg-primary/15",
-            isInView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          )}
-        >
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <h3 className="text-xl font-semibold text-foreground">
-                Virtual Internship Program
-              </h3>
-              <div className="mt-2 flex flex-wrap gap-4 text-muted-foreground">
-                <span className="flex items-center gap-2">
-                  <Building2 className="h-4 w-4" />
-                  Company Name
-                </span>
-                <span className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4" />
-                  June 2024 — August 2024
-                </span>
-              </div>
-            </div>
-            <a
-              href="#"
-              className="flex items-center gap-2 text-sm text-primary transition-colors hover:text-primary/80"
-            >
-              View Certificate
-              <ExternalLink className="h-4 w-4" />
-            </a>
-          </div>
-        </div>
-
         {/* OJT Experience Image Carousel */}
         <div
           className={cn(
