@@ -62,8 +62,8 @@ export function InternshipSection() {
             Professional Experience
           </h2>
           <p className="max-w-2xl text-lg text-muted-foreground">
-            During my virtual internship, I had the opportunity to work on various 
-            projects that enhanced my professional skills and provided valuable 
+            During my internship, I had the opportunity to work on various 
+            projectsand tasks that enhanced my professional skills and provided valuable 
             industry experience.
           </p>
         </div>
